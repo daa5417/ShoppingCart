@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h2><%= @product.title %></h2>
+<h4>Artist Name:<%= @product.artist %></h4>
+
+<hr />
+		<p>$<%= @product.price %></p>
+		<p><b>Description:</b> <%= @product.description %></p>
+
+<% if current_user %>
+			<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %> |
+		<% end %>
+<%= link_to 'Back', products_path %>
